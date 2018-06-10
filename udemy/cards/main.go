@@ -1,15 +1,11 @@
 package main
 
 func main() {
-	cards := []string{newCard(), "Ace of Diamonds"}
-	cards = append(cards, "Six of Spades")
+	// cards := newDeck()
+	// cards.saveToFile("my_cards")
 
-	for i, card := range cards {
+	cards := newDeckFromFile("my_cards")
+	cards.shuffle()
+	cards.print()
 
-	}
-
-}
-
-func newCard() string {
-	return "Five of Diamonds"
 }
